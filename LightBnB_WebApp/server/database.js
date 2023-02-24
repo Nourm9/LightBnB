@@ -24,9 +24,8 @@ users.email
  = $1`, [email])
   .then(res => res.rows[0])
   
-    // then(result => result.rows[0]);
   
-  // return Promise.resolve(user);
+
 };
 exports.getUserWithEmail = getUserWithEmail;
 
@@ -36,10 +35,7 @@ exports.getUserWithEmail = getUserWithEmail;
  * @return {Promise<{}>} A promise to the user.
  */
 const getUserWithId = function (id) {
-
-
-
-  return Promise.resolve(users[id]);
+  return pool.query(`SELECT * FROM users WHERE id = $1`,[id]).then(res => res.rows[0]);
 };
 exports.getUserWithId = getUserWithId;
 
