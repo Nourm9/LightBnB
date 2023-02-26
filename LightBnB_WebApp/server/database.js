@@ -68,7 +68,14 @@ const addUser = function (user) {
   RETURNING *;`,
       [[user.name, user.email, user.password]]
     )
-    .then((res) => res.rows[0])
+    .then((res) => {
+      res.rows[0];
+      if (res.rows[0].email) {
+        return res.rows[0];
+      } else {
+        return null;
+      }
+    })
     .catch((err) => {
       console.log(err.message);
     });
@@ -113,7 +120,7 @@ exports.getAllReservations = getAllReservations;
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 const getAllProperties = function (options, limit = 10) {
-  const getAllProperties = function (options, limit = 10) {
+  
     // 1
     const queryParams = [];
     // 2
@@ -130,7 +137,7 @@ const getAllProperties = function (options, limit = 10) {
       queryString += `AND city LIKE $${queryParams.length} `;
     }
 
-    if (owner_id.city) {
+    if (options.owner_id) {
       queryParams.push(`${options.owner_id}`);
       queryString += `AND owner_id = $${queryParams.length}\n`;
     }
@@ -146,7 +153,7 @@ const getAllProperties = function (options, limit = 10) {
       queryParams.push(options.minimum_rating);
       queryString += `HAVING avg(property_reviews.rating) >= $${queryParams.length}\n`;
     }
-    // 4
+    
     queryParams.push(limit);
     queryString += `
   GROUP BY properties.id
@@ -154,12 +161,9 @@ const getAllProperties = function (options, limit = 10) {
   LIMIT $${queryParams.length};
   `;
 
-    // 5
-    console.log(queryString, queryParams);
-
-    // 6
+ 
     return pool.query(queryString, queryParams).then((res) => res.rows);
-  };
+
 };
 exports.getAllProperties = getAllProperties;
 
