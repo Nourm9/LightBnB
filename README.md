@@ -45,7 +45,7 @@
   * `json` is a directory that contains a bunch of dummy data in `.json` files.
   * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
 
-  * Dependeices
+  ## Dependeices
    * "bcrypt": "^3.0.6",
    * "body-parser": "^1.19.0",
    * "cookie-session": "^1.3.3",
