@@ -1,5 +1,8 @@
 # LightBnB
 
+!["Screenshot of URLs page"](https://github.com/Nourm9/LightBnB/blob/master/images/Light-BNB-1.png?raw=true)
+!["Screenshot of URLs page"](https://github.com/Nourm9/LightBnB/blob/master/images/Light-BNB-2.png?raw=true)
+
 ## Project Structure
 
 ```
