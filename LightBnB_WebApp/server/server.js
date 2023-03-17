@@ -15,7 +15,7 @@ app.use(cookieSession({
   keys: ['key1']
 }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // /api/endpoints
@@ -26,7 +26,7 @@ app.use('/api', apiRouter);
 // /user/endpoints
 const userRouter = express.Router();
 userRoutes(userRouter, database);
-app.use('/users', userRouter);
+app.use('/users', userRouter); 
 
 app.use(express.static(path.join(__dirname, '../public')));
 
