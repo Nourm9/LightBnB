@@ -2,10 +2,10 @@
 LightBNB is a database project at Lighthouse Labs. To install it write "npm install" on terminal. To run it write "npm run local" in the LightBnB_WebApp folder, and the app can be viewed on localhost:3000.
 
  ## Site layout
-!["Screenshot of homepage page"]()
-!["Screenshot of login page"]()
-!["Screenshot of search page"]()
-!["Screenshot of creat listing page"]()
+!["Screenshot of homepage page"](https://github.com/Nourm9/LightBnB/blob/master/images/homepage-no-user.png?raw=true)
+!["Screenshot of homepage logged page"](https://github.com/Nourm9/LightBnB/blob/master/images/homepage-logged-in.png?raw=true)
+!["Screenshot of search page"](https://github.com/Nourm9/LightBnB/blob/master/images/Light-BNB-2.png?raw=trues)
+!["Screenshot of creat listing page"](https://github.com/Nourm9/LightBnB/blob/master/images/create-listing-logged-in.png?raw=true)
 
 ## Project Structure
 
