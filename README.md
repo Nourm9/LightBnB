@@ -1,4 +1,11 @@
 # LightBnB
+LightBNB is a database project at Lighthouse Labs. To install it write "npm install" on terminal. To run it write "npm run local" in the LightBnB_WebApp folder, and the app can be viewed on localhost:3000.
+
+ ## Site layout
+!["Screenshot of homepage page"]()
+!["Screenshot of login page"]()
+!["Screenshot of search page"]()
+!["Screenshot of creat listing page"]()
 
 ## Project Structure
 
@@ -41,6 +48,10 @@
   * `apiRoutes.js` and `userRoutes.js` are responsible for any HTTP requests to `/users/something` or `/api/something`. 
   * `json` is a directory that contains a bunch of dummy data in `.json` files.
   * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
+
+ 
+
+
 
   * Dependeices
     "bcrypt": "^3.0.6",
